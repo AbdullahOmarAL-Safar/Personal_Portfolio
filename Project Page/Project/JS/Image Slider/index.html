@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .slider {
+            position: relative;
+            width: 90%;
+            max-width: 700px;
+            height: 700px;
+            /* Set a fixed height */
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            border-radius: 24px;
+        }
+        
+        img.displaySlide {
+            display: block;
+        }
+        
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            color: #5f27cd;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(95, 39, 205, 0.2);
+            transition: all 0.6s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .prev:hover,
+        .next:hover {
+            background: #5f27cd;
+            color: #fff;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev {
+            left: 16px;
+        }
+        
+        .next {
+            right: 16px;
+        }
+        /* Optional: smooth zoom effect */
+        
+        .slide.displaySlide {
+            animation: zoomIn 0.6s ease;
+        }
+        
+        @keyframes zoomIn {
+            from {
+                transform: scale(1.02);
+                opacity: 0.6;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcWkpWG_NRrU2M8-WB8EbEcJk7smhdrY1eO0ttKXm0bo2ooOEWxk3zBSbsFrSgSJh2OEKOQ" alt="">
+            <img class="slide" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSM1RfnNxjkJjv6su_9EVi-AqVTvMyaiWergB9Vh_utvs1n6ZYTWygADBA1Xzwx0kxDfH5S" alt="">
+            <img class="slide" src="https://m.media-amazon.com/images/M/MV5BMmNkMWZmNWQtNjljNi00YTU4LTg0ZTEtY2U0OTk0MmI3NTNmXkEyXkFqcGc@._V1_.jpg" alt="">
+            <img class="slide" src="https://m.media-amazon.com/images/M/MV5BMjFkYzIwMTctYzljYS00M2RiLTlhNmItZDM3MjFiOTFiOTY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="">
+            <img class="slide" src="https://resizing.flixster.com/LumPRA7tw5a4VtKzSnGnTWpW2Q8=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvNTlmOGIyM2ItMzRhMy00MjdkLThkNDYtZWJkZDI1ODMzNmI3LmpwZw==" alt="">
+            <img class="slide" src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11993086_b_v12_af.jpg" alt="">
+
+        </div>
+        <button class="prev" onclick="previousSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

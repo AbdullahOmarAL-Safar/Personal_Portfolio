@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <div id="calculator" class="max-w-xs mx-auto mt-20 p-6 bg-gray-800 rounded-2xl shadow-2xl">
+        <input id="display" readonly class="w-full mb-4 p-3 text-2xl text-right bg-gray-900 text-white rounded-lg focus:outline-none" />
+
+        <div id="keys" class="grid grid-cols-4 gap-4">
+            <button onclick="appendToDisplay('+')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">+</button>
+            <button onclick="appendToDisplay('7')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">7</button>
+            <button onclick="appendToDisplay('8')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">8</button>
+            <button onclick="appendToDisplay('9')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">9</button>
+            <button onclick="appendToDisplay('-')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">-</button>
+            <button onclick="appendToDisplay('4')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">4</button>
+            <button onclick="appendToDisplay('5')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">5</button>
+            <button onclick="appendToDisplay('6')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">6</button>
+            <button onclick="appendToDisplay('*')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">*</button>
+            <button onclick="appendToDisplay('1')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">1</button>
+            <button onclick="appendToDisplay('2')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">2</button>
+            <button onclick="appendToDisplay('3')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">3</button>
+            <button onclick="appendToDisplay('/')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">/</button>
+            <button onclick="appendToDisplay('0')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">0</button>
+            <button onclick="appendToDisplay('.')" class="p-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition duration-200 text-xl">.</button>
+            <button onclick="calculate()" class="btn bg-green-600 hover:bg-green-700">=</button>
+            <button onclick="clearDisplay()" class="btn bg-red-600 hover:bg-red-700">C</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #countlabel {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        #countlabel {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        #btncountainer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        #decreasebtn,
+        #Restbtn,
+        #Increasebtn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #006d04;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <label for="" id="countlabel">0</label>
+    <div id="btncountainer">
+        <button id="decreasebtn">Decrease</button>
+        <button id="Restbtn">Rest</button>
+        <button id="Increasebtn">Increase</button>
+    </div>
+
+
+
+    <script>
+        const decreaseBtn = document.getElementById("decreasebtn");
+        const restBtn = document.getElementById("Restbtn");
+        const increaseBtn = document.getElementById("Increasebtn");
+        const countLabel = document.getElementById("countlabel");
+        let count = 0;
+
+        increaseBtn.onclick = function() {
+            count++;
+            countLabel.textContent = count;
+        };
+
+        decreaseBtn.onclick = function() {
+            count--;
+            countLabel.textContent = count;
+        };
+
+        restBtn.onclick = function() {
+            count = 0;
+            countLabel.textContent = count;
+        };
+    </script>
+</body>
+
+</html>
