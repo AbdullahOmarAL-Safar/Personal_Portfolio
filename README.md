@@ -35,3 +35,10 @@ Hi! I’m **Abdullah Omar Akram AL-Safar**, a passionate **Full Stack Developer*
 - ✅ Tailwind CSS (via CDN)
 - ✅ Font Awesome Icons
 - ✅ Responsive layout (mobile-first)
+
+## 👨‍💻 Author
+
+**Abdullah Omar Akram AL-Safar**  
+📺 [LEVEL UP IT - YouTube](https://www.youtube.com/@YourChannel1)  
+🔗 [LinkedIn](https://www.linkedin.com/in/abdullah-omar-2a552834b)  
+📬 [Email](mailto:abodyalsafar2009@gmail.com)
